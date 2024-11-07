@@ -31,17 +31,16 @@ def match(pattern: str, word: str)-> bool|None:
 
 def main()-> None:
     user_pattern: str = input("Enter a pattern that you want to match:\n")
-    user_word: str = input("Enter a word that you want the pattern to match with:\n")
     
     while user_pattern.lower() != "q":
+        user_word: str = input("Enter a word that you want the pattern to match with:\n")
         if match(user_pattern, user_word):
             print("The word and pattern match!")
 
         else:
             print("Unfortunately, the word and pattern do not match.")
-            print()
-            user_pattern: str = input("Enter a pattern that you want to match:\n")
-            user_word: str = input("Enter a word that you want the pattern to match with:\n")
+        print()
+        user_pattern: str = input("Enter a pattern that you want to match:\n")
 
 if __name__ == "__main__":
     main()
